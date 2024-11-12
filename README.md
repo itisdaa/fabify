@@ -1,6 +1,6 @@
 # Salaam P3
 
-P3 is network of Additive Manufacturing Service, allowing makers to build stuff wherever, whenever. Just upload the file and specify stuff, rest we'll handle.
+Fabify is a digital fabrication platform.
 
 ## P3 v0.0.1
 
@@ -15,7 +15,10 @@ Based on P3 v0.0.1, basic suggestion of additive manufacturing service provider 
 
 Long awaited feature is here, now users could suggest for 3D printers (CNC AM). Currently, only FDM is supported though in future version more additive manufacturing processes would be included. Version 0.0.3 would soon also have a guide to navigate the UI of P3.
 
+## Fabify (P3) v0.0.4
+
+P3 is now Fabify, digital fabrication workflow
+
 # Contribute and Feedback
 
-You can also contribute to the developement of P3 either by algorithms for filter and suggestions, client and/or cloud side GCode generator and Guide for Building the additive manufacturing services.
-Futher, you give feedback and suggest features by emailing us [hello@designalgorithmanalysis.com](mailto:hello@designalgorithmanalysis.com)
+You can also contribute to the developement of fabify either by algorithms for filter and suggestions, client and/or cloud side GCode generator and Guide for Building the additive manufacturing services.
