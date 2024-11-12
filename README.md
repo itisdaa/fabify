@@ -1,4 +1,4 @@
-# Salaam P3
+# Salaam Fabify
 
 Fabify is a digital fabrication platform.
 
