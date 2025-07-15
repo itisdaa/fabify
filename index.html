@@ -130,4 +130,14 @@
     </div>
   </body>
   <script src="./scripts/P3-print.js"></script>
+
+  <!-- register the service-worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(() => {});
+      });
+    }
+  </script>
+
 </html>
