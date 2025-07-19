@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Search a Nearest Seller</title>
+  
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta
+    name="description"
+    content="
+      P3 is a Network of Additive Manufacturing Services, allowing makers to build stuff wherever, whenever.
+      "
+  >
+  <meta 
+    name="keywords" 
+    content="P3, 3D, printing, AM, additive manufacturing, network, service provider, buy, printer, printers, Pakistan, 3D Printers in Pakistan, minifactory"
+  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#feda14">
+
+  <!-- links -->
+  <link rel="stylesheet" href="/styles/search.css" />
+  <link rel="stylesheet" href="/styles/P3-main.css"/>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/x-icon" href="./imgs/faviconP3.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Top Icons -->
+  <div class="top-bar">
+    <a href="/index.html" title="Home">🏠</a>
+    <div id="theme-change">
+        🎨
+    </div>
+  </div>
+
+
+  <!-- Title -->
+  <h1>Search a Seller</h1>
+
+  <!-- Filter Box -->
+  <div class="search-box">
+    <select id="process">
+      <option value="both">Both</option>
+      <option value="FDM">FDM</option>
+      <option value="SLA">SLA</option>
+    </select>
+
+    <input type="number" id="rate" placeholder="Your max budget (Rs)" step="10" min="0">
+
+    <button id="search">Search</button>
+  </div>
+
+  <p class="sort-note">Sorted by nearest first</p>
+
+  <!-- Results -->
+  <div id="results"></div>
+
+  <!-- scripts -->
+  <script src="/scripts/changingthemes.js"></script>
+  <script src="/scripts/search.js"></script>
+</body>
+</html>
