@@ -3,8 +3,13 @@ const CACHE_NAME = 'fabify-cache';
 
 const FILES_TO_CACHE = [
     '/',
+
+    // html files
     '/index.html',
     '/build.html',
+    '/search.html',
+
+    //menifest file
     '/manifest.json',
 
 
@@ -27,8 +32,10 @@ const FILES_TO_CACHE = [
     '/scripts/P3-print.js',
     '/scripts/P3-v-0-0-1.js',
     '/scripts/P3-v-0-0-2.js',
+    '/scripts/search.js',
 
     '/src/scripts/P3-v-0-0-1.js',
+    
 
     // CSS
     '/styles/dropdown-p3-wa-0-0-1.css',
@@ -37,6 +44,7 @@ const FILES_TO_CACHE = [
     '/styles/P3-print.css',
     '/styles/P3-v0-0-1.css',
     '/styles/P3-v0-0-2.css',
+    '/styles/search.css'
 ];
 
 
