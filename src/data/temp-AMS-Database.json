@@ -3,60 +3,60 @@
     "name": "Maq Corporation",
     "availableProcces": ["FDM"],
     "location": {
-      "long": 33.650787,
-      "lat": 72.963275
+      "lat": 33.650787,
+      "long": 72.963275
     },
-    "contact": 923335398131,
+    "contact": "+923335398131",
     "rate": 40
   },
   {
     "name": "3D Infinity",
     "availableProcces": ["FDM"],
     "location": {
-      "long": 33.491490,
-      "lat": 73.097467
+      "lat": 33.491490,
+      "long": 73.097467
     },
-    "contact": 923340111946,
+    "contact": "+923340111946",
     "rate": 10
   },
   {
     "name": "Oloid 3D",
     "availableProcces": ["FDM"],
     "location": {
-      "long": 33.652285,
-      "lat": 73.032420
+      "lat": 33.652285,
+      "long": 73.032420
     },
-    "contact": 923005876139,
+    "contact": "+923005876139",
     "rate": 15
   },
   {
     "name": "Saud's Basement",
     "availableProcces": ["FDM"],
     "location": {
-      "long": 33.700629,
-      "lat": 72.950190
+      "lat": 33.700629,
+      "long": 72.950190
     },
-    "contact": 923039666315,
+    "contact": "+923039666315",
     "rate": 15
   },
   {
     "name": "Browide",
     "availableProcces": ["FDM"],
     "location": {
-      "long": 33.700629,
-      "lat": 72.950190
+      "lat": 33.700629,
+      "long": 72.950190
     },
-    "contact": 923070550155,
+    "contact": "+923070550155",
     "rate": 15
   },
   {
     "name": "TechnoSolz",
     "availableProcces": ["FDM"],
     "location": {
-      "long": 33.625791,
-      "lat": 73.011759
+      "lat": 33.625791,
+      "long": 73.011759
     },
-    "contact": 923036500739,
+    "contact": "+923036500739",
     "rate": 15
   }
 ]

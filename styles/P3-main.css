@@ -41,6 +41,24 @@ body {
   align-content: center;
   flex-wrap: wrap;
 }
+
+/* Search Button Style */
+#search-btn {
+  width: 90%;
+  max-width: 300px;
+  padding: 0.6em 2em;
+  font-size: 1.1em;
+  border: 3px solid var(--colorS);
+  background-color: var(--colorP);
+  color: var(--colorS);
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--colorS);
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 20px;
+}
+
+
 .main-nav-bar {
   display: flex;
   flex-direction: row;
