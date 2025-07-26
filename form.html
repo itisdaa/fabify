@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta
+    name="description"
+    content="
+      P3 is a Network of Additive Manufacturing Services, allowing makers to build stuff wherever, whenever.
+      "
+  >
+  <meta 
+    name="keywords" 
+    content="P3, 3D, printing, AM, additive manufacturing, network, service provider, buy, printer, printers, Pakistan, 3D Printers in Pakistan, minifactory"
+  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#feda14">
+
+  <!-- links -->
+  <link rel="stylesheet" href="/styles/form.css" />
+  <link rel="stylesheet" href="/styles/P3-main.css"/>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/x-icon" href="./imgs/faviconP3.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <div id="screen1" class="centered">
+    <h1>Fabify Your Design</h1>
+    <input type="file" id="fileInput" accept=".stl" hidden />
+    <button onclick="document.getElementById('fileInput').click()">Select File</button>
+  </div>
+
+  <div id="screen2" class="hidden layout">
+
+    <!-- <div class="viewer">
+      <img src="" alt="3D Preview" />
+      <div class="dimensions"></div>
+    </div> -->
+    <!-- <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+      }
+    }
+    </script>
+  <script type="module" src="/scripts/view-3d.js"></script>
+  <view-3d src="fabify.STL"></view-3d>
+  <style>
+    view-3d {
+    display: block;
+    width: 50%;
+    height: 100%;
+    min-width: 100x;
+    min-height: 100px;
+    }
+  </style> -->
+
+  <!-- Replace your <view-3d> and related section with this -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="/scripts/view-3d.js"></script>
+  <view-3d id="viewer" src=""></view-3d>
+
+
+    <div class="form">
+      <h1>Fabify Your Design</h1>
+      
+      <div class="section">
+        <label>What Is This For?</label>
+        <div class="options cyan">
+          <span>Prototype</span>
+          <span>Functional Use</span>
+          <span>Visual Display</span>
+          <span>Jig or Fixture</span>
+          <span>Enclosure</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <label>Pick a Material Type</label>
+        <div class="options amber">
+          <span>Let Operator Choose</span>
+          <span>Standard (PLA)</span>
+          <span>Strong (PETG or CF-PIA)</span>
+          <span>Flexible (TPU)</span>
+          <span>Heat/Impact Resistant (ABS/Nylon)</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <label>How Important is Detail?</label>
+        <div class="options green">
+          <span>Low (Fast)</span>
+          <span>Medium (Balanced)</span>
+          <span>High (Fine Detail)</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <label>Final Touches</label>
+        <div class="options violet">
+          <span>Remove supports</span>
+          <span>Sand or smooth</span>
+          <span>Make it fit with other parts</span>
+          <span>Inspect dimensions</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <label>Special Notes</label>
+        <textarea id="specialNotes" placeholder="Type any instructions..."></textarea>
+      </div>
+
+      <button class="fab-btn" onclick="submitData()">Fab it</button>
+    </div>
+  </div>
+
+  <script src="/scripts/form.js"></script>
+</body>
+</html>
