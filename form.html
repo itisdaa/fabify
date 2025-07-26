@@ -1,61 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="P3 is a Network of Additive Manufacturing Services, allowing makers to build stuff wherever, whenever.">
-    <meta name="keywords" content="P3, 3D, printing, AM, additive manufacturing, network, service provider, buy, printer, printers, Pakistan, 3D Printers in Pakistan, minifactory">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#feda14">
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta
+    name="description"
+    content="
+      P3 is a Network of Additive Manufacturing Services, allowing makers to build stuff wherever, whenever.
+      "
+  >
+  <meta 
+    name="keywords" 
+    content="P3, 3D, printing, AM, additive manufacturing, network, service provider, buy, printer, printers, Pakistan, 3D Printers in Pakistan, minifactory"
+  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#feda14">
 
-    <link rel="stylesheet" href="/styles/P3-main.css">
-    <link rel="stylesheet" href="/styles/form.css">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" type="image/x-icon" href="./imgs/faviconP3.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!-- links -->
+  <link rel="stylesheet" href="/styles/form.css" />
+  <link rel="stylesheet" href="/styles/P3-main.css"/>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/x-icon" href="./imgs/faviconP3.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-    <title>Print Request</title>
+
 </head>
 <body>
-    <h1 class="header">Print Request</h1>
-    <p class="sub">Let's Make Your Product Together!</p>
+  <div id="screen1" class="centered">
+    <h1>Fabify Your Design</h1>
+    <input type="file" id="fileInput" accept=".stl" hidden />
+    <button onclick="document.getElementById('fileInput').click()">Select File</button>
+  </div>
 
-    <form id="printForm">
-        <label for="file">Upload your STL Design File *</label>
-        <input type="file" id="file" name="file" accept=".stl" required>
+  <div id="screen2" class="hidden layout">
 
-        <label for="usecase">Elaborate your use case *</label>
-        <textarea id="usecase" name="usecase" required></textarea>
+    <!-- <div class="viewer">
+      <img src="" alt="3D Preview" />
+      <div class="dimensions"></div>
+    </div> -->
+    <!-- <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+      }
+    }
+    </script>
+  <script type="module" src="/scripts/view-3d.js"></script>
+  <view-3d src="fabify.STL"></view-3d>
+  <style>
+    view-3d {
+    display: block;
+    width: 50%;
+    height: 100%;
+    min-width: 100x;
+    min-height: 100px;
+    }
+  </style> -->
 
-        <label for="material">Material *</label>
-        <select id="material" name="material" required>
-            <option value="">-- Select Material --</option>
-            <option value="decide">I don't know, You may decide</option>
-            <option value="pla">Standard (PLA)</option>
-            <option value="petg">Strong (PETG or CF-PLA)</option>
-            <option value="tpu">Flexible (TPU)</option>
-            <option value="abs">Heat/Impact Resistant (ABS, Nylon)</option>
-            <option value="other">Other</option>
-        </select>
+  <!-- Replace your <view-3d> and related section with this -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="/scripts/view-3d.js"></script>
+  <view-3d id="viewer" src=""></view-3d>
 
-        <label>How important is detail? *</label>
-        <div class="radio-group">
-            <label><input type="radio" name="detail" value="1" required> 1 (Low)</label>
-            <label><input type="radio" name="detail" value="2"> 2</label>
-            <label><input type="radio" name="detail" value="3"> 3 (High)</label>
+
+    <div class="form">
+      <h1>Fabify Your Design</h1>
+      
+      <div class="section">
+        <label>What Is This For?</label>
+        <div class="options cyan">
+          <span>Prototype</span>
+          <span>Functional Use</span>
+          <span>Visual Display</span>
+          <span>Jig or Fixture</span>
+          <span>Enclosure</span>
         </div>
+      </div>
 
-        <label for="scale">Scale (e.g. 1, 0.5, 2) *</label>
-        <input type="number" id="scale" name="scale" step="0.1" required>
+      <div class="section">
+        <label>Pick a Material Type</label>
+        <div class="options amber">
+          <span>Let Operator Choose</span>
+          <span>Standard (PLA)</span>
+          <span>Strong (PETG or CF-PIA)</span>
+          <span>Flexible (TPU)</span>
+          <span>Heat/Impact Resistant (ABS/Nylon)</span>
+        </div>
+      </div>
 
-        <label for="touches">Final Touches</label>
-        <textarea id="touches" name="touches"></textarea>
+      <div class="section">
+        <label>How Important is Detail?</label>
+        <div class="options green">
+          <span>Low (Fast)</span>
+          <span>Medium (Balanced)</span>
+          <span>High (Fine Detail)</span>
+        </div>
+      </div>
 
-        <label for="notes">Notes for Manufacturer</label>
-        <textarea id="notes" name="notes"></textarea>
+      <div class="section">
+        <label>Final Touches</label>
+        <div class="options violet">
+          <span>Remove supports</span>
+          <span>Sand or smooth</span>
+          <span>Make it fit with other parts</span>
+          <span>Inspect dimensions</span>
+        </div>
+      </div>
 
-        <button type="submit">Submit</button>
-    </form>
+      <div class="section">
+        <label>Special Notes</label>
+        <textarea id="specialNotes" placeholder="Type any instructions..."></textarea>
+      </div>
 
-    <script src="/scripts/form.js"></script>
+      <button class="fab-btn" onclick="submitData()">Fab it</button>
+    </div>
+  </div>
+
+  <script src="/scripts/form.js"></script>
 </body>
 </html>

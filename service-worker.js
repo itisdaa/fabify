@@ -8,6 +8,7 @@ const FILES_TO_CACHE = [
     '/index.html',
     '/build.html',
     '/search.html',
+    '/form.html',
 
     //menifest file
     '/manifest.json',
@@ -33,6 +34,8 @@ const FILES_TO_CACHE = [
     '/scripts/P3-v-0-0-1.js',
     '/scripts/P3-v-0-0-2.js',
     '/scripts/search.js',
+    '/scripts/form.js',
+    'scripts/view-3d.js',
 
     '/src/scripts/P3-v-0-0-1.js',
     
@@ -44,7 +47,8 @@ const FILES_TO_CACHE = [
     '/styles/P3-print.css',
     '/styles/P3-v0-0-1.css',
     '/styles/P3-v0-0-2.css',
-    '/styles/search.css'
+    '/styles/search.css',
+    '/styles/form.css'
 ];
 
 
