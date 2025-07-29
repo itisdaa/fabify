@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta
+    name="description"
+    content="
+      P3 is a Network of Additive Manufacturing Services, allowing makers to build stuff wherever, whenever.
+      "
+  >
+  <meta 
+    name="keywords" 
+    content="P3, 3D, printing, AM, additive manufacturing, network, service provider, buy, printer, printers, Pakistan, 3D Printers in Pakistan, minifactory"
+  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- links -->
+  <link rel="stylesheet" href="/styles/library_search.css" />
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/x-icon" href="./imgs/faviconP3.ico">
+  <title>Fabify Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/library_search.css" />
+</head>
+
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Fabify Library</h1>
+      <a href="#" class="view-all">View All →</a>
+    </div>
+
+    <div class="search-container">
+      <div class="search-top">
+        <img src="images/icons/search-icon.svg" alt="Search Icon" class="search-icon" />
+        <input type="text" id="searchInput" class="search-input" placeholder="Search from the world best 3D Library" />
+        <button class="search-button" onclick="handleSearch()">Go</button>
+      </div>
+      <div class="categories-wrapper">
+        <div class="categories" id="categoryScroll">
+          <button class="cat-button nav" onclick="scrollCats('left')">←</button>
+          <button class="cat-button" data-cat="Cat1">Cat1</button>
+          <button class="cat-button" data-cat="Cat2">Cat2</button>
+          <button class="cat-button" data-cat="Cat3">Cat3</button>
+          <button class="cat-button" data-cat="Cat4">Cat4</button>
+          <button class="cat-button" data-cat="Cat5">Cat5</button>
+          <button class="cat-button" data-cat="Cat6">Cat6</button>
+          <button class="cat-button" data-cat="Cat7">Cat7</button>
+          <button class="cat-button" data-cat="Cat8">Cat8</button>
+          <button class="cat-button" data-cat="Cat9">Cat9</button>
+          <button class="cat-button" data-cat="Cat10">Cat10</button>
+          <button class="cat-button nav" onclick="scrollCats('right')">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/library_search.js"></script>
+</body>
+</html>
