@@ -1,42 +1,42 @@
-const filters = ["Cat 1", "Cat 2", "Cat 3", "Cat 4", "Cat 5", "Cat 6", "Cat 7", "Cat 8", "Cat 9", "Cat 10"];
-let selectedFilters = [];
+const filterContainer = document.getElementById('filter-tags');
+const btnLeft = document.getElementById('scroll-left');
+const btnRight = document.getElementById('scroll-right');
 
-document.getElementById("searchBtn").addEventListener("click", () => {
-  document.getElementById("searchBox").classList.toggle("hidden");
-  document.querySelector(".buttons").remove();
-  showFilters();
+let selectedFilters = []; // store selected filter names
+
+// Scroll events
+btnLeft.addEventListener('click', () => {
+  filterContainer.scrollBy({ left: -150, behavior: 'smooth' });
 });
 
-function showFilters() {
-  const container = document.getElementById("filterTags");
-  container.innerHTML = "";
+btnRight.addEventListener('click', () => {
+  filterContainer.scrollBy({ left: 150, behavior: 'smooth' });
+});
 
-  filters.forEach(filter => {
-    const tag = document.createElement("div");
-    tag.className = "filter-tag";
-    tag.innerText = filter;
+// Check button states
+function updateButtonState() {
+  btnLeft.disabled = filterContainer.scrollLeft <= 0;
+  const maxScrollLeft = filterContainer.scrollWidth - filterContainer.clientWidth;
+  btnRight.disabled = filterContainer.scrollLeft >= maxScrollLeft - 1;
+}
 
-    if (selectedFilters.includes(filter)) {
-      tag.classList.add("active");
+filterContainer.addEventListener('scroll', updateButtonState);
+window.addEventListener('load', updateButtonState);
+
+// Handle filter selection
+document.querySelectorAll('#filter-tags .filter').forEach(filter => {
+  filter.addEventListener('click', () => {
+    const filterName = filter.textContent.trim();
+
+    // Toggle selection
+    filter.classList.toggle('selected');
+
+    if (filter.classList.contains('selected')) {
+      selectedFilters.push(filterName);
+    } else {
+      selectedFilters = selectedFilters.filter(f => f !== filterName);
     }
 
-    tag.onclick = () => {
-      if (selectedFilters.includes(filter)) {
-        // Remove from selected
-        selectedFilters = selectedFilters.filter(f => f !== filter);
-      } else {
-        // Add to selected
-        selectedFilters.push(filter);
-      }
-      showFilters();
-    };
-
-    container.appendChild(tag);
+    console.log("Selected Filters:", selectedFilters);
   });
-}
-
-function performSearch() {
-  const searchTerm = document.getElementById("searchInput").value.trim();
-  const selectedText = selectedFilters.length > 0 ? selectedFilters.join(", ") : "All";
-  alert(`Searching "${searchTerm}" in categories: ${selectedText}`);
-}
+});

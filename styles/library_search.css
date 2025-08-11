@@ -1,149 +1,148 @@
-body {
-  background: black;
-  color: white;
-  font-family: sans-serif;
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: #3B9AE1;
+}
+
+#header {
+  padding-left: 0rem;
+}
+
+#whole-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
-.container {
-  
+#whole-container > div {
+  width: 100%;
+  max-width: 35rem;
+  padding: 1.25rem;
 }
 
-.gradient-text {
-  background: linear-gradient(to right, #4d5dfb, #62d5c4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2rem;
+#header,
+#container-search {
+  text-align: left;
 }
 
-.view-all {
-  color: #c770f0;
-  font-size: 0.9rem;
-  text-decoration: underline;
-  display: block;
-  margin-top: -10px;
-}
-
-.buttons {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  
-}
-
-button{
-  padding: 12px 24px;
-  border-radius: 25px;
-  border: none;
-  font-size: 1rem;
+#logo {
+  width: 5%;
+  margin-right: 0.625rem;
   cursor: pointer;
 }
 
-#go-btn{
-    font-size: 35px;
-    font-weight: 700;
-    color: #80e8c9;
-    cursor: pointer;
+#logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.outline {
-  border: 1px solid #62d5c4;
-  background: transparent;
-  color: #62d5c4;
-}
-
-button#searchBtn {
-  background: #3653f8;
-  color: white;
-  
-}
-
-.hidden {
-  display: none;
-}
-
-#searchBox {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#searchbar{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #254BC9;
-    height: 70px;
-    padding-left: 20px;
-    padding-right: 30px;
-    border-top-left-radius: 13px;
-    border-top-right-radius: 13px;
-    margin-bottom: -14px;
-}
-
-#leftbar {
+#upper-row {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  flex: 1;
-  gap: 10px;
+  justify-content: space-between;
 }
 
-#icon{
- height: 45px;
- padding-right: 10px;
- padding-left:0;
-
-}
-
-
-#searchBox button {
-  margin-left: 10px;
-  background-color: #4d5dfb;
-  color: white;
-}
-
-.filters {
-  margin-top: 15px;
+#lower-row {
+  margin-top: 0.75rem;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  background-color: #254BC9;
-  padding: 20px;
-  border-bottom-right-radius: 13px;
-  border-bottom-left-radius: 13px;
-  margin-bottom: 0;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.filter-tag {
-    padding: 2px 10px;
-    background-color: #80e8c9;
-    border-radius: 50px;
-    color: #254bc9;
-    font-size: 11px;
-    cursor: pointer;
+#filter-tags {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 4px;
+  scroll-behavior: smooth;
+
+  /* Hide scrollbar */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
 }
-.filter-tag.active {
-  background-color: #f15fff;
+
+#filter-tags::-webkit-scrollbar {
+  display: none; 
+}
+
+#container-search {
+  background-color: #DFF6FF;
+  border-radius: 0.75rem;
+}
+
+
+.filter {
+  cursor: pointer;
+  background-color: #3B9AE1;
+  border-radius: 0.75rem;
+  padding: 0 0.5rem;
   color: white;
+  transition: background-color 0.2s ease;
 }
 
-
-input::placeholder{
-  color: aquamarine;
-font-size: large;
+/* Darker shade when selected */
+.filter.selected {
+  background-color: black;
 }
 
-#searchInput {
-  flex: 1;
-  min-width: 0;
+#search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+input {
   background-color: transparent;
-  color: white;
   border: none;
   outline: none;
-  font-size: 16px;
-  padding: 10px;
+  width: 100%;
+}
+
+input::placeholder {
+  font-size: 1rem;
+  color: black;
+}
+
+#search-button {
+  cursor: pointer;
+  color: black;
+}
+
+#input-field {
+  flex: 1;
+}
+
+.scroll-btn {
+  background: none; /* remove background */
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: black; /* default icon color */
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.scroll-btn:hover {
+  color: #3B9AE1;
+}
+
+.scroll-btn:disabled {
+  color: grey; /* greyed icon when disabled */
+  cursor: default;
+  opacity: 0.5;
 }
