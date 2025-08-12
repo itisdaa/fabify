@@ -1,0 +1,148 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: #3B9AE1;
+}
+
+#header {
+  padding-left: 0rem;
+}
+
+#whole-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#whole-container > div {
+  width: 100%;
+  max-width: 35rem;
+  padding: 1.25rem;
+}
+
+#header,
+#container-search {
+  text-align: left;
+}
+
+#logo {
+  width: 5%;
+  margin-right: 0.625rem;
+  cursor: pointer;
+}
+
+#logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#upper-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#lower-row {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#filter-tags {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 4px;
+  scroll-behavior: smooth;
+
+  /* Hide scrollbar */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+
+#filter-tags::-webkit-scrollbar {
+  display: none; 
+}
+
+#container-search {
+  background-color: #DFF6FF;
+  border-radius: 0.75rem;
+}
+
+
+.filter {
+  cursor: pointer;
+  background-color: #3B9AE1;
+  border-radius: 0.75rem;
+  padding: 0 0.5rem;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+/* Darker shade when selected */
+.filter.selected {
+  background-color: black;
+}
+
+#search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+input::placeholder {
+  font-size: 1rem;
+  color: black;
+}
+
+#search-button {
+  cursor: pointer;
+  color: black;
+}
+
+#input-field {
+  flex: 1;
+}
+
+.scroll-btn {
+  background: none; /* remove background */
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: black; /* default icon color */
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.scroll-btn:hover {
+  color: #3B9AE1;
+}
+
+.scroll-btn:disabled {
+  color: grey; /* greyed icon when disabled */
+  cursor: default;
+  opacity: 0.5;
+}

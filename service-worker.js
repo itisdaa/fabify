@@ -9,6 +9,7 @@ const FILES_TO_CACHE = [
     '/build.html',
     '/search.html',
     '/form.html',
+    '/library_search.html',
 
     //menifest file
     '/manifest.json',
@@ -48,7 +49,8 @@ const FILES_TO_CACHE = [
     '/styles/P3-v0-0-1.css',
     '/styles/P3-v0-0-2.css',
     '/styles/search.css',
-    '/styles/form.css'
+    '/styles/form.css',
+    '/styles/library_search.css'
 ];
 
 
